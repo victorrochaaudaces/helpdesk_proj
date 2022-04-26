@@ -6,28 +6,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
 <body>
     <section>
         <nav>
-           <ul id="navLista">
-                <div id="titulo"><p>Central de Atendimento</p></div>
-                
-                <li>Ferramentas</li>
-                <li>about us</li>
-                <li>Historico de ajudas</li>
+            <ul id="navLista">
+                <div id="titulo">
+                    <p>Central de Atendimento</p>
+                </div>
+
+                <li><button id="myBtn">Abrir chamado</button></li>
+                <li><button>Ferramentas</button></li>
+                <li><button>Historico</button></li>
                 <i id="iconHelp" class="fa-solid fa-handshake-angle"></i>
                 <i id="iconUser" class="fa-solid fa-user-tie"></i>
             </ul>
         </nav>
         <section>
-            <div id="menu"></div>
+            <div id="menu">
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Chamado numero:<span id="contadorHelp"></span></p>
+                        <section id="empresaSec">
+                            <div>
+                                <p>Empresa:<select id="selectEmpresa">
+
+                                        <option hidden>Selecione uma empresa</option>
+                                        <option value="0">MVR</option>
+                                        <option value="1">AVG</option>
+                                    </select></p>
+                            </div>
+                        </section>
+                        <section style="border: 2px solid red;"></section>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     </section>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+
+            let ids = Math.floor(Math.random() * 2500 * 15);
+            document.getElementById('contadorHelp').innerHTML = ids
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
