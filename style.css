@@ -1,16 +1,17 @@
 header {
-    border: 2px solid red;
+    
 
 }
 #menu{
-    border: 1px solid red;
+    
     width: 1304px;
     height: 500px;
     background-color: darkslategrey;
 }
 
+
 #navLista {
-    border: 2px solid red;
+    
     background-color: rgb(40, 85, 99);
     display: flex;
     margin: 0px;
@@ -20,12 +21,12 @@ header {
     gap: 90px;
     list-style-type: none;
     align-items: center;
-    transition: 2s;
+    
 }
 #navLista li:hover{
     cursor: pointer;
     transform: scale(1.1);
-
+    transition: transform 0.4s;
 }
 #navLista li {
     text-align: center;
