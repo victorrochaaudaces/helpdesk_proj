@@ -44,15 +44,82 @@
                                         <option value="1">AVG</option>
                                     </select></p>
                             </div>
-                            
+
                         </section>
-                        <!-- <section style="border: 2px solid red;"></section> -->
+                        <section id="projetoSec">
+                            <div id="projDiv">
+                                <p id="tituloProj">Houve um problema? em qual projeto? </p>
+                                <ul>
+                                    <li>
+                                        Projetos:
+                                        <select id="selectProj">
+                                            <option value="0">Gamificação</option>
+                                            <option value="1">Academia</option>
+                                        </select>
+
+                                    </li>
+                                    <li>
+                                        Modulo:
+                                        <select id="selectModulo">
+                                            <option value="0">Primeiro</option>
+                                            <option value="1">Segundo</option>
+                                            <option value="2">Terceiro</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="detalhesDiv">
+                                <p id="tituloProblema">FAQ <i class="fa-solid fa-circle-question"></i></p>
+                                <span id="span">
+                                    <ul id="listaProblemas">
+                                        <li>
+                                            <header style="background-color: grey; color: yellow;">
+                                                <p> 1. É necessario cadastro?</p>
+                                            </header>
+                                            <h1>
+                                                <p>em nosso sistema não é necessario o cadastro de usuario,
+                                                    mas que o mesmo defina se vai criar perguntas(como professor)
+                                                    ou respondera a questão elaborada(como aluno)
+
+                                                </p>
+                                            </h1>
+                                        </li>
+                                        <li>
+                                            <header style="background-color: grey; color: yellow;">
+                                                <p> 2. Salvamento de progresso</p>
+                                            </header>
+                                            <h1>
+                                                <p>o ranking tem como base a pontuação do usuario em cada partida
+                                                    sendo realizada uma contagem de vezes em que o jogador ganhou,
+                                                    salvando em nuvem.
+                                                </p>
+                                            </h1>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
+
+                        <div id="divInputs">
+                            
+                            <span class="tooltip"><p>Insira detalhes do problema abaixo
+                                <span class="tooltiptext">Com suas palavras, detalhe o problema que ocorreu no produto.</span>
+                            </p></span>
+                             
+                                  <textarea  id="areaTexto" cols="65" rows="7"></textarea>                          
+                            
+
+                        </div>
+
+
                     </div>
 
-                </div>
-
-            </div>
         </section>
+        </div> <!-- DIV DO MODAL  -->
+
+        </div>
+
+        </div>
+    </section>
     </section>
     <script>
         // Get the modal
