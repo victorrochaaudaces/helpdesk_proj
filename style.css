@@ -13,7 +13,7 @@
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
-    width: 150vh;
+    width: 96.6%;
     gap: 90px;
     list-style-type: none;
     align-items: center;
@@ -67,7 +67,7 @@
     text-align: center;
 }
 .divCont p {
-    width: 100%;
+    width: 140%;
     position: relative;
     bottom: 30%;
     text-align: left;
@@ -75,7 +75,7 @@
 }
 .divCont{
     border: 1px solid rgb(77, 72, 72);
-    width: 24%;
+    width: 34%;
     border-radius: 5px 2px 5px;
     height: 32px;
     box-shadow: 0px 2px 6px 0 rgba(35, 54, 65, 0.75);
@@ -122,7 +122,7 @@
 
 /* MODAL E SEUS ESTILOS */
 .modal {
-    display: block;
+    display: none;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */

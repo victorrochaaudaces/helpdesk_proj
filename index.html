@@ -70,9 +70,12 @@
                                     </li>
                                 </ul>
                             </div>
+                            <hr>
                             <div id="detalhesDiv">
                                 <p id="tituloProblema">FAQ <i class="fa-solid fa-circle-question"></i></p>
+                                    
                                 <span id="span">
+                                    
                                     <ul id="listaProblemas">
                                         <li>
                                             <header style="background-color: grey; color: yellow;">
@@ -100,13 +103,13 @@
                                     </ul>
                                 </span>
                             </div>
-
+                            <hr>
                         <div id="divInputs">
                             
                             <span class="tooltip"><p>Insira detalhes do problema abaixo
                                 <span class="tooltiptext">Com suas palavras, detalhe o problema que ocorreu no produto.</span>
                             </p></span>
-                             <textarea  id="areaTexto" cols="75" rows="4" placeholder=" digite aqui o seu texto"></textarea>                          
+                             <textarea  id="areaTexto" cols="65" rows="4" placeholder=" digite aqui o seu texto"></textarea>                          
                             
 
                         </div>
@@ -122,36 +125,8 @@
         </div>
     </section>
     </section>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-
-            let ids = Math.floor(Math.random() * 2500 * 15);
-            document.getElementById('contadorHelp').innerHTML = ids
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+   
+    <script src="./script.js"></script>
 </body>
 
 </html>
