@@ -66,13 +66,27 @@
     background-color: slategray;
     text-align: center;
 }
-
+.divCont p {
+    width: 100%;
+    position: relative;
+    bottom: 30%;
+    text-align: left;
+    margin-left: 4px;
+}
+.divCont{
+    border: 1px solid rgb(77, 72, 72);
+    width: 24%;
+    border-radius: 5px 2px 5px;
+    height: 32px;
+    box-shadow: 0px 2px 6px 0 rgba(35, 54, 65, 0.75);
+}
 #contadorHelp {
-   
+    position: relative;
     height: 35%;
     width: 15%;
     font-weight: bolder;
 }
+
 
  /* ICONES */
 #iconHelp {
@@ -256,12 +270,22 @@
     }
 
     /* Tittles */
+
+    /* titulo da DIV PROJETO */
+    #divTituloProj{
+        /* border: 2px solid red; */
+        width: 38%;
+        height: 95%;
+    }
     #tituloProj{
-       /* border:  2px solid red; */
         width: 320px;
         position: relative;
-        bottom:15px;
+        bottom:5px;
+        top: 10%;
     }
+     /* xxxxxxxxxxx: */
+
+
     #tituloProjDois{
         /* border:  2px solid red; */
         width: 320px;

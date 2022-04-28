@@ -35,8 +35,9 @@
                     <!-- Modal content -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Chamado numero:<span id="contadorHelp"></span></p>
-                        <section id="empresaSec">
+                        <div class="divCont"><p id="pContador">Chamado numero:<span id="contadorHelp"></span></p></div>
+                        
+                        <!-- <section id="empresaSec">
                             <div>
                                 <p>Empresa:<select id="selectEmpresa">
 
@@ -46,10 +47,10 @@
                                     </select></p>
                             </div>
 
-                        </section>
+                        </section> -->
                         <section id="projetoSec">
                             <div id="projDiv">
-                                <p id="tituloProj">Houve um problema? em qual projeto? </p>
+                               <div id="divTituloProj"><p id="tituloProj">Houve um problema? em qual projeto? </p></div> 
                                 <ul>
                                     <li>
                                         Projetos:
@@ -105,7 +106,7 @@
                             <span class="tooltip"><p>Insira detalhes do problema abaixo
                                 <span class="tooltiptext">Com suas palavras, detalhe o problema que ocorreu no produto.</span>
                             </p></span>
-                             <textarea  id="areaTexto" cols="65" rows="7"></textarea>                          
+                             <textarea  id="areaTexto" cols="75" rows="4" placeholder=" digite aqui o seu texto"></textarea>                          
                             
 
                         </div>
