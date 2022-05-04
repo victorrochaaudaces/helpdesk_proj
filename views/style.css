@@ -85,40 +85,86 @@ body {
   }
 
 
-  /* modal */
-  /* The Modal (background) */
-.modal {
-    /* display: block;  */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+  .modal {
+    display: block;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+#idCont{
+color: #ff0707;
+}
+#tModal {
+    width: 70%;
+    text-align: left;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: medium;
+}
+
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 6% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  /* The Close Button */
+    width: 64%;
+    /* Could be more or less, depending on screen size */
+    border: 2px solid red;
+    height: 70%;
+}
+
+#mUl {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style-type: none;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+#ulTwo{
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+}
+#ulTwo li {
+    border: 2px solid red;
+    width: 25%;
+}
+
+#mSelect {
+    font-family: "Lucida Console", Monaco, monospace;
+    width: 45%;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+/* The Close Button */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
