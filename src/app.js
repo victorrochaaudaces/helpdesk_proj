@@ -28,7 +28,11 @@ const indexR = require("./routes/indexRoute");
 api.use(cors());
 api.use(bodyParser.urlencoded({ extended: true }));
 api.use(bodyParser.json());
+api.engine("html", require("ejs").renderFile);
 api.set("view engine", "html");
-api.use("/", indexR);
+api.use("/create-ticket", indexR);
+// api.use("/", (req, res) => {
+//     res.status(200).render(__dirname + "/src/views/index.html");
+// });
 
 module.exports = { serverHttp, io, port };
