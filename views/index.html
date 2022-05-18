@@ -6,230 +6,249 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./style.css"> -->
-    <style>body {
-        font-family: "Lato", sans-serif;
-        transition: background-color .5s;
-      }
-      #divCall{
-          display: none;
-      }
-      
-      .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgba(104, 94, 94, 0.426);
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-      }
-      
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #000000;
-        display: block;
-        transition: 0.3s;
-      }
-      
-      .sidenav a:hover {
-        color: #ff0707;
-      }
-      
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-      
-      #main {
-        transition: margin-left .5s;
-        padding: 16px;
-        width: 50%;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-      }
-      
-      @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-      }
-      
-      #footer{
-          font-size: 12px;
-          text-align: center;
-         
-          position: relative;
-          top: 45%;
-      }
-    
-      .button_slide {
-        color: rgb(0, 0, 0);
-        /* border: 2px solid rgb(216, 2, 134); */
-        border-radius: 5px;
-        padding: 18px 36px;
-        display: inline-block;
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: 14px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        box-shadow: inset 0 0 0 0 #10d802bc;
-        -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
-        transition: ease-out 0.4s;
-      }
-      #outer {
-        width: 364px;
-        margin: 50px auto 0 auto;
-        text-align: center;
-      }
-      .slide_right:hover {
-        box-shadow: inset 400px 0 0 0 #23bc08;
-      }
-    
-    
-      .modal {
-        display: block;
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
-    
-    }
-    
-    /* Modal Content/Box */
-    #idCont{
-    color: #ff0707;
-    }
-    #tModal {
-        width: 70%;
-        text-align: left;
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: medium;
-    }
-    
-    .modal-content {
-        background-color: #fefefe;
-        margin: 6% auto;
-        /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        border-radius: 5px;
-        width: 55%;
-        /* Could be more or less, depending on screen size */
-        height: 70%;
-    }
-    
-    #mUl {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        list-style-type: none;
-        font-family: "Lucida Console", Monaco, monospace;
-    }
-    
-    #ulDois{
-        display: flex;
-        gap: 15px;
-        list-style-type: none;
-    }
-    #ulDois li {
-        width: 25%;
-    }
-    #ulTres{
-      position: relative;
-      left: 15%;
-      top: 4%;
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
-      list-style-type: none;
-      font-family: "Lucida Console", Monaco, monospace;
-    }
-    #ulTres li{
-      /* border: 2px solid red; */
-        width: 40%;
-        position: relative;
-        right: 22%;
-    }
-    #ulQuatro{
-    
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
-      list-style-type: none;
-      font-family: "Lucida Console", Monaco, monospace;
-    }
-    #ulQuatro li{
-        width: 25%;
-    }
-    
-    #mSelect {
-        font-family: "Lucida Console", Monaco, monospace;
-        width: 45%;
-        border: none;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    }
-    
-    /* tool tip */
-    
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-    }
-    
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 220px;
-      background-color: black;
-      color: #fff;
-      font-size: small;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px 0;
-    
-      /* Position the tooltip */
-      position: absolute;
-      z-index: 1;
-    }
-    
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-    }
-    /* fim */
-    
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }</style>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            transition: background-color .5s;
+        }
+
+        #divCall {
+            display: none;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(104, 94, 94, 0.426);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ff0707;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            width: 50%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        #footer {
+            font-size: 12px;
+            text-align: center;
+
+            position: relative;
+            top: 45%;
+        }
+
+        .button_slide {
+            color: rgb(0, 0, 0);
+            /* border: 2px solid rgb(216, 2, 134); */
+            border-radius: 5px;
+            padding: 18px 36px;
+            display: inline-block;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 #10d802bc;
+            -webkit-transition: ease-out 0.4s;
+            -moz-transition: ease-out 0.4s;
+            transition: ease-out 0.4s;
+        }
+
+        #outer {
+            width: 364px;
+            margin: 50px auto 0 auto;
+            text-align: center;
+        }
+
+        .slide_right:hover {
+            box-shadow: inset 400px 0 0 0 #23bc08;
+        }
+
+
+        .modal {
+            display: block;
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+
+        }
+
+        /* Modal Content/Box */
+        #idCont {
+            color: #ff0707;
+        }
+
+        #tModal {
+            width: 70%;
+            text-align: left;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: medium;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 6% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            width: 55%;
+            /* Could be more or less, depending on screen size */
+            height: 70%;
+        }
+
+        #mUl ul{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            list-style-type: none;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+
+        
+        #ulDois ul{
+            display: flex;
+            gap: 15px;
+            list-style-type: none;
+        }
+
+        #ulDois li {
+            width: 25%;
+        }
+
+        
+        #ulTres ul{
+            position: relative;
+            left: 15%;
+            top: 4%;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            list-style-type: none;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+
+        #ulTres li {
+            /* border: 2px solid red; */
+            width: 40%;
+            position: relative;
+            right: 22%;
+        }
+
+        #ulQuatro {
+
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            list-style-type: none;
+            font-family: "Lucida Console", Monaco, monospace;
+        }
+
+        #ulQuatro li {
+            width: 25%;
+        }
+
+        #mSelect {
+            font-family: "Lucida Console", Monaco, monospace;
+            width: 45%;
+            border: none;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        /* tool tip */
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: black;
+            color: #fff;
+            font-size: small;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        /* fim */
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -258,80 +277,101 @@
             <!-- Conteudo modal -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <span>
-                    <p id="tModal">Abra seu chamado fique a vontade <br>ticket de numero: <span id="idCont"></span>
-                </span></p>
 
-                </span>
-
-
-                <ul id="mUl">
-                    <li>
+                <form action="">
+                    <div class="">
                         <span>
-                            <p><input type="text" placeholder="digite o seu nome.."></p>
+                            <p id="tModal">Abra seu chamado fique a vontade <br>ticket de numero: <span
+                                    id="idCont"></span>
+                        </span></p>
+
                         </span>
-                    </li>
-                    <li>
-                        <span>
-                            <p>Selecione o projeto:<select id="pSelect">
-                                    <option selected disabled>Escolha um projeto</option>
-                                    <option value="0">Academia SA</option>
-                                    <option value="1">HelpDesk</option>
-                                    <option value="2">GamificaçãoSA</option>
-                                </select>
-                            </p>
-                        </span>
-                    </li>
-                </ul>
 
-                <!-- <ul id="ulDois">
-                    <li>input1</li>
-                    <li>input2</li>
-                </ul> -->
-                <ul id="ulTres">
-                    <li>
+                        <div id="mUl">
+                            <ul>
+                                <li>
+                                    <span>
+                                        <p><input type="text" placeholder="digite o seu nome.."></p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>Selecione o projeto:<select id="pSelect">
+                                                <option selected disabled>Escolha um projeto</option>
+                                                <option value="0">Academia SA</option>
+                                                <option value="1">HelpDesk</option>
+                                                <option value="2">GamificaçãoSA</option>
+                                            </select>
+                                        </p>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <span>
-                            <p>qual a prioridade do problema?<select name="" id="pSelectTwo">
-                                    <option value="0">baixa</option>
-                                    <option value="1">media</option>
-                                    <option value="2">alta</option>
-                                </select>
-                            </p>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <p>FAQ:<select id="">
-                                    <option selected disabled>Escolha um caso</option>
-                                    <option value="0">Erro ao cadastrar</option>
-                                    <option value="1">Erro ao editar</option>
-                                    <option value="2">Erro de paginação</option>
-                                </select>
-                            </p>
-                        </span>
-                    </li>
+                        <div id="ulTres">
+                            <ul > 
+                                <li>
 
-                </ul>
+                                    <span>
+                                        <p>qual a prioridade do problema?<select name="" id="pSelectTwo">
+                                                <option value="0">baixa</option>
+                                                <option value="1">media</option>
+                                                <option value="2">alta</option>
+                                            </select>
+                                        </p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <p>FAQ:<select id="">
+                                                <option selected disabled>Escolha um caso</option>
+                                                <option value="0">Erro ao cadastrar</option>
+                                                <option value="1">Erro ao editar</option>
+                                                <option value="2">Erro de paginação</option>
+                                            </select>
+                                        </p>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        
+                        <div id="container">
+                            <span>
+                                <textarea name="" id="" cols="50" rows="3"
+                                    placeholder="detalhe aqui mais informações sobre o defeito..." style="resize: none;">
+                                        </textarea>
+                            </span>
+                            <div class="tooltip"><i id="info" class="fa-solid fa-circle-info"></i>
+                                <span class="tooltiptext">No campo de texto seja detalhista não poupe palavras <br>seu
+                                    feedback
+                                    nos ajuda a melhorarmos cada vez mais.</span>
+                            </div>
+                        </div>
 
 
-                <div id="container">
-                    <span>
-                        <textarea name="" id="" cols="50" rows="3" placeholder="detalhe aqui mais informações sobre o defeito..." style="resize: none;">
-                        </textarea>
-                    </span>
-                    <div class="tooltip"><i id="info" class="fa-solid fa-circle-info"></i>
-                        <span class="tooltiptext">No campo de texto seja detalhista não poupe palavras <br>seu feedback
-                            nos ajuda a melhorarmos cada vez mais.</span>
                     </div>
-                </div>  
+
+                </form>
 
 
 
+
+
+
+
+
+                
 
             </div>
-            <!-- fim do modal -->
+
+
+
+
+
         </div>
+        <!-- fim do modal -->
+    </div>
 
     </div>
     </div>
